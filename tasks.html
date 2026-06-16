@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Проверь свои знания</title>
+  <link rel="stylesheet" href="css/base.css?v=menu-final-1">
+  <link rel="stylesheet" href="css/tasks.css?v=tasks-align-1">
+</head>
+<body class="tasks-page">
+<div class="site-wrap">
+  <header class="site-header site-header--light">
+    <a class="site-brand" href="index.html">
+      <span class="site-brand-icon" aria-hidden="true"></span>
+      <span>ЦИФРОВОЙ РЕСУРС</span>
+    </a>
+
+    <nav class="site-nav">
+      <a href="index.html">Живопись</a>
+      <a href="architecture.html">Архитектура</a>
+      <a href="tasks.html" class="active">Задания</a>
+    </nav>
+    <div class="site-dots" aria-hidden="true">
+      <span></span><span></span><span></span>
+    </div>
+  </header>
+
+  <section class="section task-cover" id="top">
+    <h1>Проверь<br>свои знания</h1>
+    <div class="arrow-down">⌄</div>
+  </section>
+
+  <section class="section knowledge-slide">
+    <div class="knowledge-grid">
+      <article class="knowledge-card knowledge-card--one">
+        <h2>Задача 1</h2>
+        <p>Дан треугольник:<br>Какой вид имеет данный треугольник?</p>
+        <p class="task-options">
+          <span class="answer-option">1. прямоугольный</span>
+          <span class="answer-option">2. остроугольный</span>
+          <span class="answer-option" id="task3-1">3. тупоугольный</span>
+        </p>
+        <button class="btn task-btn" data-correct="task3-1">Показать ответ</button>
+        <img class="task-figure task-figure--triangle" src="assets/task_triangle_task1.png" alt="Треугольник">
+      </article>
+
+      <article class="knowledge-card knowledge-card--two">
+        <h2>Задача 2</h2>
+        <p>Дан треугольник со сторонами: 7, 7, 9.<br>Какой вид имеет данный треугольник?</p>
+        <p class="task-options">
+          <span class="answer-option">1. равносторонний</span>
+          <span class="answer-option" id="task3-2">2. равнобедренный</span>
+          <span class="answer-option">3. разносторонний</span>
+        </p>
+        <button class="btn task-btn" data-correct="task3-2">Показать ответ</button>
+      </article>
+
+      <article class="knowledge-card knowledge-card--three">
+        <h2>Задача 3</h2>
+        <p>Что это за линия?<br><span class="answer-option" id="task3-3">а) биссектриса</span><br><span class="answer-option">б) высота</span><br><span class="answer-option">в) медиана</span></p>
+        <button class="btn task-btn" data-correct="task3-3">Показать ответ</button>
+        <img class="task-figure task-figure--height" src="assets/triangle_with_height.png" alt="Высота треугольника">
+      </article>
+
+      <article class="knowledge-card knowledge-card--four">
+        <h2>Задача 4</h2>
+        <p>Что показано на рисунке?<br><span class="answer-option">а) пропорция</span><br><span class="answer-option">б) перспектива</span><br><span class="answer-option" id="task3-4">в) симметрия</span></p>
+        <button class="btn task-btn" data-correct="task3-4">Показать ответ</button>
+        <img class="task-figure task-figure--squares" src="assets/ornament_squares.png" alt="Орнамент из квадратов">
+      </article>
+    </div>
+  </section>
+
+  <section class="section final-task-slide">
+    <div class="final-layout">
+      <article class="final-main-task">
+        <h2>Задача 5</h2>
+        <p>
+          Посмотри на картину внимательно. Какие геометрические фигуры преобладают в композиции
+          этой картины?
+        </p>
+        <div class="last-supper-no-frame">
+          <img class="last-supper" id="last-supper-img" src="assets/last_supper.jpg" alt="Тайная вечеря">
+        </div>
+        <button
+          class="btn task-btn"
+          data-toggle-target="task5-answer"
+          data-swap-image="last-supper-img"
+          data-open-src="assets/last_supper_markup.jpg"
+          data-closed-src="assets/last_supper.jpg"
+        >Показать ответ</button>
+        <div class="task-hidden-answer" id="task5-answer"></div>
+      </article>
+
+      <div class="final-side-tasks">
+        <article class="side-task">
+          <h2>Задача 6</h2>
+          <p>
+            Вычислите объём пирамиды, основанием которой является прямоугольник со сторонами
+            3 и 4 м. Высота половины пирамиды равна 4,5 м.
+          </p>
+          <div class="side-answer" id="task-final-answer-1"><span>Ответ:</span> 36 м³</div>
+          <button class="btn task-btn" data-toggle-target="task-final-answer-1">Показать ответ</button>
+        </article>
+
+        <article class="side-task">
+          <h2>Задача 7</h2>
+          <p>
+            Дана пирамида с высотой 9 метров и объёмом - 108 метров. Вычислите длину
+            одной стороны основания.
+          </p>
+          <div class="side-answer" id="task-final-answer-2"><span>Ответ:</span> 6 м</div>
+          <button class="btn task-btn" data-toggle-target="task-final-answer-2">Показать ответ</button>
+        </article>
+      </div>
+    </div>
+
+    <div class="finish-text">
+      <strong>Отличная работа!</strong>
+      Теперь геометрия стала твоим инструментом для понимания искусства и архитектуры.
+      Продолжай замечать формы и линии в окружающем мире!
+    </div>
+  </section>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

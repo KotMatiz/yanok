@@ -1,0 +1,821 @@
+/* ========================= */
+/* СТРАНИЦА: АРХИТЕКТУРА */
+/* ========================= */
+
+:root {
+  --arch-page-x: clamp(56px, 5vw, 96px);
+  --arch-content-max: 1760px;
+  --arch-content-edge: max(var(--arch-page-x), calc((100vw - var(--arch-content-max)) / 2));
+  --arch-main-text-size: clamp(21px, 1.62vw, 31px);
+  --arch-script-title-size: clamp(64px, 5.7vw, 98px);
+  --arch-section-title-size: clamp(36px, 2.6vw, 56px);
+  --arch-heading-small: clamp(26px, 1.95vw, 38px);
+}
+
+.architecture-page {
+  overflow-x: hidden;
+  background: #2b1912;
+}
+
+.architecture-page .site-wrap {
+  width: 100%;
+  max-width: none;
+  min-height: 100%;
+  background: #eadcc2;
+}
+
+.architecture-page .site-wrap > .site-header {
+  padding-left: var(--arch-content-edge) !important;
+  padding-right: var(--arch-content-edge) !important;
+}
+
+.architecture-main {
+  width: 100%;
+  overflow: hidden;
+  background: #eadcc2;
+}
+
+.architecture-section {
+  position: relative;
+  width: 100%;
+  padding: clamp(44px, 4vw, 76px) 0;
+  overflow: hidden;
+  background: url("../assets/fon2.jpg") center / cover no-repeat;
+}
+
+.architecture-content {
+  position: relative;
+  z-index: 2;
+  width: min(calc(100% - var(--arch-page-x) - var(--arch-page-x)), var(--arch-content-max));
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+.arch-script {
+  margin: 0 0 -8px;
+  font-family: "Sloop Script Pro", cursive;
+  font-size: var(--arch-script-title-size);
+  font-weight: 400;
+  line-height: 0.82;
+  color: #3b241c;
+}
+
+.arch-title,
+.arch-subtitle,
+.arch-note,
+.arch-definition__title,
+.pyramid-solution__title,
+.pyramid-facts h3 {
+  font-family: "Gagalin", Impact, "Arial Black", Arial, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: #3d302a;
+}
+
+.arch-title {
+  max-width: 1180px;
+  margin: 0 0 clamp(18px, 1.9vw, 30px);
+  font-size: var(--arch-section-title-size);
+  line-height: 1.05;
+}
+
+.arch-title-large {
+  max-width: 1420px;
+}
+
+.arch-title--small,
+.arch-subtitle {
+  font-size: var(--arch-heading-small);
+  line-height: 1.08;
+}
+
+.arch-text,
+.arch-list,
+.pyramid-solution__text p {
+  font-family: "Evolventa", Arial, Helvetica, sans-serif;
+  font-size: var(--arch-main-text-size);
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: 0;
+  color: #62564d;
+}
+
+.arch-text {
+  margin: 0;
+  margin: -35px 0 0;
+}
+
+.arch-copy-stack {
+  display: grid;
+  gap: clamp(14px, 1.45vw, 24px);
+}
+
+.arch-two-column {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(340px, 0.86fr);
+  gap: clamp(34px, 3.8vw, 70px);
+  align-items: center;
+}
+
+.arch-photo {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  border: 4px solid #4a3328;
+  border-radius: 8px;
+  background: #eadcc2;
+  box-shadow: 0 12px 28px rgba(47, 29, 20, 0.16);
+}
+
+.arch-photo--plain {
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  outline: none;
+}
+
+.arch-photo-large {
+  max-width: 690px;
+  min-height: clamp(240px, 20vw, 350px);
+}
+
+.arch-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.arch-list li {
+  margin: 0 0 0.45em;
+}
+
+.arch-list li::before {
+  content: "★ ";
+  color: #4b3429;
+}
+
+.arch-list--text {
+  max-width: 1060px;
+}
+
+.arch-note {
+  margin: clamp(8px, 1vw, 18px) 0 0;
+  font-size: clamp(22px, 1.72vw, 32px);
+  line-height: 1.12;
+  margin: -5px 0 0;
+  color: #5b5149;
+}
+
+/* ========================= */
+/* HERO */
+/* ========================= */
+
+.architecture-hero {
+  padding-top: clamp(116px, 9.2vw, 150px);
+  padding-bottom: clamp(32px, 3.8vw, 62px);
+}
+
+.architecture-hero__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(420px, 0.88fr);
+  gap: clamp(36px, 4.2vw, 78px);
+  align-items: start;
+}
+
+.architecture-hero__intro {
+  display: grid;
+  align-items: start;
+}
+
+.architecture-hero__image {
+  width: min(760px, 100%);
+  height: auto;
+  max-height: clamp(300px, 26vw, 430px);
+  margin-top: calc(clamp(14px, 1.8vw, 28px) + 24px);
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+.architecture-hero__copy {
+  max-width: 700px;
+  margin-top: calc(clamp(126px, 10vw, 168px) + 56px);
+  margin-bottom: 0;
+  font-size: clamp(24px, 1.88vw, 34px);
+  line-height: 1.2;
+  text-align: left;
+}
+
+/* ========================= */
+/* СИММЕТРИЯ И ПРОПОРЦИИ */
+/* ========================= */
+
+.parthenon-section {
+  padding-top: clamp(36px, 3.4vw, 62px);
+  padding-bottom: clamp(38px, 3.8vw, 70px);
+}
+
+.parthenon-layout {
+  align-items: stretch;
+}
+
+.parthenon-section .arch-script {
+  margin-bottom: -14px;
+}
+
+.parthenon-section .arch-title {
+  margin-bottom: clamp(12px, 1.4vw, 22px);
+}
+
+.arch-definition {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(180px, 240px);
+  grid-template-areas:
+    "title title"
+    "lead decor"
+    "list decor";
+  align-content: start;
+  column-gap: clamp(22px, 2vw, 34px);
+  row-gap: clamp(12px, 1.25vw, 22px);
+  max-width: 700px;
+  padding: 0 0 0 clamp(28px, 2.2vw, 36px);
+  background: rgba(255, 255, 255, 0.035);
+  border-left: 4px solid rgba(74, 51, 40, 0.36);
+  box-shadow: none;
+  align-self: stretch;
+}
+
+.arch-definition__title {
+  grid-area: title;
+  margin: 0;
+  font-size: clamp(22px, 1.58vw, 29px);
+  line-height: 1.12;
+  color: #5b5149;
+}
+
+.arch-definition__lead {
+  grid-area: lead;
+  margin: 0;
+  font-family: "Evolventa", Arial, Helvetica, sans-serif;
+  font-size: var(--arch-main-text-size);
+  font-weight: 700;
+  line-height: 1.18;
+  color: #62564d;
+}
+
+.arch-definition .arch-list {
+  grid-area: list;
+}
+
+.arch-definition__decor {
+  grid-area: decor;
+  width: 100%;
+  max-width: 240px;
+  justify-self: end;
+  align-self: start;
+  margin-top: clamp(8px, 0.9vw, 16px);
+}
+
+.parthenon-bottom-text {
+  max-width: none;
+  width: 100%;
+  margin: clamp(14px, 1.4vw, 22px) 0 0;
+  line-height: 1.17;
+}
+
+.proportions-intro {
+  padding-top: clamp(44px, 4vw, 74px);
+  padding-bottom: clamp(42px, 3.8vw, 70px);
+}
+
+.proportions-intro__grid,
+.figures-intro__grid {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.34fr) minmax(0, 1fr);
+  gap: clamp(34px, 3.7vw, 70px);
+  align-items: center;
+}
+
+.proportions-intro__decor,
+.figures-intro__decor {
+  width: min(420px, 100%);
+  max-height: 540px;
+  object-fit: contain;
+  object-position: left bottom;
+  opacity: 0.95;
+}
+
+.proportions-intro__copy,
+.figures-intro__copy {
+  max-width: 1180px;
+  display: grid;
+  gap: clamp(14px, 1.45vw, 24px);
+}
+
+.proportions-intro__copy .arch-title,
+.figures-intro__copy .arch-title {
+  margin-bottom: 0;
+}
+
+.temples-layout {
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 0.78fr);
+}
+
+.temples-gallery {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(150px, 0.42fr);
+  gap: clamp(14px, 1.5vw, 24px);
+  align-items: end;
+  margin-top: 35px;
+}
+
+.temples-gallery__main {
+  min-height: clamp(300px, 28vw, 500px);
+}
+
+.temples-full-text {
+  grid-column: 1 / -1;
+  width: 100%;
+  max-width: none;
+  margin: -35px 0 0;
+  text-align: justify;
+  text-align-last: left;
+}
+
+/* ========================= */
+/* ПИРАМИДА */
+/* ========================= */
+
+.pyramid-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(360px, 0.9fr);
+  gap: clamp(34px, 3.8vw, 72px);
+  align-items: start;
+}
+
+.pyramid-left {
+  max-width: 980px;
+}
+
+.pyramid-layout .arch-photo {
+  max-width: 700px;
+  min-height: clamp(260px, 23vw, 400px);
+}
+
+.pyramid-facts {
+  display: grid;
+  gap: clamp(18px, 2vw, 34px);
+  padding: clamp(22px, 2.2vw, 38px);
+  background: rgba(255, 255, 255, 0.16);
+  border-left: 8px solid rgba(74, 51, 40, 0.82);
+}
+
+.pyramid-facts h3 {
+  margin: 0 0 0.6em;
+  font-size: clamp(25px, 1.9vw, 36px);
+  line-height: 1.08;
+}
+
+.pyramid-solution {
+  width: 100%;
+  margin: clamp(28px, 2.6vw, 40px) 0 0;
+  padding: clamp(24px, 2.2vw, 36px);
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  border-left: 6px solid rgba(74, 51, 40, 0.72);
+}
+
+.pyramid-solution__title {
+  margin: 0 0 clamp(12px, 1vw, 18px);
+  font-size: clamp(28px, 2.2vw, 42px);
+  line-height: 1.08;
+}
+
+.pyramid-solution__body {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr) 250px;
+  gap: clamp(22px, 2.2vw, 36px);
+  align-items: start;
+}
+
+.pyramid-solution__scheme {
+  width: 100%;
+  max-width: 220px;
+  object-fit: contain;
+  justify-self: start;
+  align-self: start;
+}
+
+.pyramid-solution__text {
+  display: grid;
+  gap: clamp(6px, 0.55vw, 10px);
+  min-width: 0;
+}
+
+.pyramid-solution__text p {
+  margin: 0;
+  line-height: 1.15;
+  max-width: none;
+}
+
+.pyramid-solution__formula-img {
+  width: 250px;
+  height: auto;
+  justify-self: end;
+  align-self: start;
+  margin-top: clamp(88px, 6vw, 112px);
+}
+
+.pyramid-solution-photo {
+  width: 100%;
+  max-width: 700px;
+  min-height: clamp(260px, 23vw, 400px);
+  justify-self: start;
+}
+
+.solution-label {
+  font-family: "Gagalin", Impact, "Arial Black", Arial, sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.solution-label--red {
+  color: #b24a42;
+}
+
+.solution-label--green {
+  color: #7c8b46;
+}
+
+/* ========================= */
+/* ПРИМЕРЫ */
+/* ========================= */
+
+.figures-intro {
+  padding-top: clamp(44px, 4vw, 74px);
+}
+
+.examples-section {
+  padding-top: clamp(38px, 3.6vw, 66px);
+  padding-bottom: clamp(38px, 3.6vw, 66px);
+}
+
+.examples-section--final {
+  padding-bottom: 0;
+}
+
+.example-grid {
+  display: grid;
+  gap: clamp(34px, 3.8vw, 72px);
+}
+
+.arch-example {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 0.54fr);
+  gap: clamp(28px, 3.2vw, 60px);
+  align-items: center;
+}
+
+.arch-example:nth-child(even) {
+  grid-template-columns: minmax(360px, 0.54fr) minmax(0, 1fr);
+}
+
+.arch-example:nth-child(even) .arch-example__copy {
+  order: 2;
+}
+
+.arch-example__copy {
+  display: grid;
+  gap: clamp(12px, 1.5vw, 22px);
+}
+
+.arch-example__copy .arch-script {
+  margin-bottom: -18px;
+}
+
+.arch-subtitle {
+  margin: 0;
+}
+
+.arch-example .arch-photo {
+  min-height: clamp(240px, 21vw, 380px);
+}
+
+.arch-example--gallery {
+  align-items: end;
+}
+
+.mini-gallery {
+  display: grid;
+  grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr);
+  gap: clamp(14px, 1.5vw, 24px);
+  align-items: end;
+}
+
+.mini-gallery .arch-photo:first-child {
+  min-height: clamp(170px, 14vw, 240px);
+}
+
+.mini-gallery .arch-photo:last-child {
+  min-height: clamp(280px, 24vw, 430px);
+}
+
+/* ========================= */
+/* НИЖНЕЕ МЕНЮ */
+/* ========================= */
+
+.architecture-page .bottom-nav {
+  width: 100vw;
+  min-height: 72px;
+  margin: clamp(54px, 5vw, 86px) 0 0 calc(50% - 50vw);
+  padding: 8px var(--arch-content-edge);
+  display: grid;
+  grid-template-columns: minmax(270px, 1fr) auto minmax(150px, 1fr);
+  gap: 20px;
+  align-items: center;
+  background: #684020;
+  color: #f1e5ca;
+}
+
+.bottom-brand {
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Evolventa", Arial, Helvetica, sans-serif;
+  font-size: clamp(18px, 1.35vw, 26px);
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.bottom-brand .brand-icon {
+  width: clamp(18px, 1.25vw, 24px);
+  height: clamp(18px, 1.25vw, 24px);
+  object-fit: contain;
+  flex: 0 0 clamp(18px, 1.25vw, 24px);
+}
+
+.bottom-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(14px, 1.6vw, 30px);
+}
+
+.bottom-links a {
+  min-width: 230px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-family: "Gagalin", Impact, "Arial Black", Arial, sans-serif;
+  font-size: clamp(18px, 1.3vw, 25px);
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+  color: #362011;
+  background: #bda993;
+  box-shadow: 0 8px 18px rgba(51, 29, 13, 0.18);
+  white-space: nowrap;
+}
+
+.bottom-links a:first-child {
+  min-width: 270px;
+  background: #f3ead8;
+}
+
+.bottom-dots {
+  justify-self: end;
+  font-size: 22px;
+  line-height: 1;
+  letter-spacing: 8px;
+  color: #d9c399;
+  white-space: nowrap;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ========================= */
+/* АДАПТАЦИЯ */
+/* ========================= */
+
+@media (max-width: 1180px) {
+  .architecture-hero__grid,
+  .arch-two-column,
+  .pyramid-layout,
+  .arch-example,
+  .arch-example:nth-child(even) {
+    grid-template-columns: 1fr;
+  }
+
+  .arch-example:nth-child(even) .arch-example__copy {
+    order: 0;
+  }
+
+  .architecture-hero__copy,
+  .arch-definition,
+  .pyramid-facts {
+    max-width: 100%;
+  }
+
+  .arch-definition {
+    grid-template-columns: minmax(0, 1fr) minmax(180px, 240px);
+  }
+
+  .parthenon-bottom-text {
+    max-width: 100%;
+  }
+
+  .architecture-hero__image,
+  .arch-photo-large,
+  .pyramid-layout .arch-photo,
+  .pyramid-solution-photo {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .pyramid-solution__body {
+    grid-template-columns: minmax(150px, 190px) minmax(0, 1fr);
+  }
+
+  .pyramid-solution__formula-img {
+    grid-column: 2;
+    justify-self: start;
+    margin-top: 2px;
+    width: min(250px, 100%);
+  }
+
+  .pyramid-solution__scheme {
+    max-width: 190px;
+  }
+
+  .pyramid-solution__text p {
+    font-size: clamp(19px, 1.8vw, 27px);
+  }
+
+  .pyramid-left {
+    max-width: 100%;
+  }
+
+  .pyramid-solution {
+    padding: 26px 24px;
+  }
+
+  .pyramid-solution-photo {
+    justify-self: start;
+  }
+
+  .architecture-page .bottom-nav {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding-top: 16px;
+    padding-bottom: 18px;
+  }
+
+  .bottom-brand,
+  .bottom-dots {
+    justify-self: center;
+  }
+}
+
+@media (max-width: 980px) {
+  :root {
+    --arch-page-x: 24px;
+  }
+
+  .architecture-section {
+    padding: 70px 0;
+  }
+
+  .architecture-hero {
+    padding-top: 124px;
+  }
+
+  .architecture-hero__grid,
+  .proportions-intro__grid,
+  .figures-intro__grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .architecture-hero__copy {
+    margin-bottom: 0;
+  }
+
+  .arch-definition {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "lead"
+      "list"
+      "decor";
+    padding-right: clamp(18px, 2vw, 30px);
+  }
+
+  .arch-definition__decor {
+    justify-self: start;
+    width: min(220px, 48%);
+    margin-top: 0;
+  }
+
+  .proportions-intro__decor,
+  .figures-intro__decor {
+    width: min(360px, 100%);
+  }
+
+  .temples-gallery,
+  .mini-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .bottom-links {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .bottom-links a,
+  .bottom-links a:first-child {
+    width: min(420px, 100%);
+    min-width: unset;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --arch-page-x: 12px;
+    --arch-main-text-size: clamp(18px, 5vw, 23px);
+    --arch-script-title-size: clamp(62px, 17vw, 86px);
+    --arch-section-title-size: clamp(30px, 8vw, 42px);
+    --arch-heading-small: clamp(24px, 6.5vw, 32px);
+  }
+
+  .architecture-section {
+    padding: 56px 0;
+  }
+
+  .architecture-hero {
+    padding-top: 112px;
+  }
+
+  .arch-photo,
+  .arch-photo-large,
+  .pyramid-layout .arch-photo,
+  .temples-gallery__main,
+  .temples-gallery__small,
+  .arch-example .arch-photo,
+  .mini-gallery .arch-photo:first-child,
+  .mini-gallery .arch-photo:last-child {
+    min-height: 0;
+    height: auto;
+  }
+
+  .architecture-hero__image {
+    height: clamp(260px, 72vw, 330px);
+  }
+
+  .arch-definition,
+  .pyramid-facts {
+    padding: 24px 18px;
+  }
+
+  .pyramid-solution {
+    padding: 22px 18px;
+  }
+
+  .pyramid-solution__body {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .pyramid-solution__scheme,
+  .pyramid-solution__formula-img {
+    max-width: 220px;
+  }
+
+  .pyramid-solution__formula-img {
+    grid-column: auto;
+    justify-self: start;
+  }
+
+  .pyramid-solution-photo {
+    min-height: 0;
+    height: auto;
+  }
+}
+.symmetry-term {
+  color: #2f241c !important;
+  font-weight: 700;
+}
